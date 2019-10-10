@@ -77,6 +77,9 @@ export default {
         method: 'post',
         data: this.form
       }).then(res => {
+        // console.log(res.data.data)
+        let userInfo = res.data.data
+        window.localStorage.setItem('userInfo', JSON.stringify(userInfo))
         this.loginLoading = false
         this.$router.push('/home')
         this.$message({

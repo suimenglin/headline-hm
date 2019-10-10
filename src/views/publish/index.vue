@@ -1,7 +1,5 @@
 <template>
-  <div>
-      这是home主页面
-  </div>
+  <h1>这是 publish</h1>
 </template>
 
 <script>
