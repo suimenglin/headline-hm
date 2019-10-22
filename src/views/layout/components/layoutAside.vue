@@ -11,10 +11,10 @@
            <template>
               <span slot="title">内容管理</span>
            </template>
-           <el-menu-item index="publish">发布文章</el-menu-item>
-           <el-menu-item index="2-2">内容列表</el-menu-item>
-           <el-menu-item index="2-3">评论列表</el-menu-item>
-           <el-menu-item index="2-4">素材管理</el-menu-item>
+           <el-menu-item index="/article/publish">发布文章</el-menu-item>
+           <el-menu-item index="/article/list">内容列表</el-menu-item>
+           <el-menu-item index="/comment/list">评论列表</el-menu-item>
+           <el-menu-item index="/material/list">素材管理</el-menu-item>
        </el-submenu>
        <el-submenu index="3">
            <template>
@@ -25,7 +25,7 @@
            <el-menu-item index="3-3">粉丝画像</el-menu-item>
            <el-menu-item index="3-4">粉丝列表</el-menu-item>
        </el-submenu>
-       <el-menu-item index="4">
+       <el-menu-item index="/user/center">
            <span slot="title">账户信息</span>
        </el-menu-item>
     </el-menu>

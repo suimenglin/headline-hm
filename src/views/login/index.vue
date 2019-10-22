@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   data () {
     return {
@@ -72,14 +72,17 @@ export default {
     },
     submitData () {
       this.loginLoading = true
-      axios({
-        url: 'http://ttapi.research.itcast.cn/mp/v1_0/authorizations',
+      this.$http({
+        url: '/authorizations',
         method: 'post',
         data: this.form
       }).then(res => {
         // console.log(res.data.data)
-        let userInfo = res.data.data
-        window.localStorage.setItem('userInfo', JSON.stringify(userInfo))
+        let userInfo = res
+        // 将用户信息保存到localStorage
+        // window.localStorage.setItem('userInfo', JSON.stringify(userInfo))
+        // 将用户信息保存到vuex中
+        this.$store.commit('setuserInfo', userInfo)
         this.loginLoading = false
         this.$router.push('/home')
         this.$message({

@@ -30,7 +30,8 @@ export default {
     }
   },
   created () {
-    this.userInfo = JSON.parse(window.localStorage.getItem('userInfo'))
+    // this.userInfo = JSON.parse(window.localStorage.getItem('userInfo'))
+    this.userInfo = this.$store.state.userInfo
   }
 }
 </script>
